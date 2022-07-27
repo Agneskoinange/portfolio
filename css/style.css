@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*-------- website styles------ */
+:root{
+    --hue-1:257;
+    --hue-2:47;
+    --bg-color: hsl(var(--hue-1), 100%, 97%);
+    --main-color-1: hsl(var(--hue-1), 100%, 60%);
+    --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
+    --main-color-2: hsl(var(--hue-2), 100%, 61%);
+    --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
+    --bg-color-1: hsl(var(--hue-1), 100%, 97%);
+    --bg-color-2: #fff;
+    --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+    --bg-color-transparent: rgba(255,255,255, 0.6);
+    --heading-color: hsl(var(--hue-1), 61%, 24%);
+    --text-color: hsl(var(--hue-1), 17%, 63%);
+
+
+}
+
+
+/*-------- General styles------ */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    font-family: "Poppins", sans-serif;
+}
+
+::selection {
+    background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*--------Reusable styles------ */
+
+.container{
+    position: relative;
+    /* width: 100px; */
+    max-width: 75rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+
+}
+
+.logo {
+    margin-right: 1.5rem;
+    height: 120px;
+    line-height: 120px;
+    font-family: "Abril Fatface", cursive;
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.logo span {
+    color: var(--main-color-1);
+}
+
+/*--------Navbar styles------ */
+
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+header.scrolled {
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+
+nav.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+header .logo {
+    height: 120px;
+    line-height: 120px;
+}
+
+header.scrolled .logo{
+    height: 80px;
+    line-height: 80px;
+}
+
+.links {
+    /* background-color: red; */
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem; 
+    text-transform: titlecase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+    font-weight: 500;
+    opacity: 0.9;
+    transition: 0.3s;
+
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--main-color-1);
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--heading-color)
+}
+
+.nav-link:hover::after{
+    width: 100%;
+    opacity: 0.2;
+    
+}
+
+.toggle-btn {
+    color: var(--heading-color);
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--bg-color-2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+    transition: 00.3s;
+    margin-right: 1rem;
+}
+
+.toggle-btn:hover {
+    filter: brightness(97%);
+}
+
+/*--------Showcase Area Styling------ */
+
+.showcase-area {
+    padding: 120px 0;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: 1fr 550px;
+    height: calc(100vh - 120px);
+    max-height: 600px;
+    align-items: center;
+}
+
+.sub.heading{
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--main-color-2);
+    padding: 0.13rem 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+
+}
+
+.showcase-area .sub.heading {
+    font-size: 0.7rem;
+}
+
+.showcase-area .heading {
+    font-size: 3.5rem;
+}
+
+.showcase-area .text {
+    margin: 0.8rem 0;
+}
+
+.cta {
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.cta .btn {
+    margin-right: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: .9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--main-color-dark-1);
+
+}
+
+
+.btn.secondary-btn {
+    position: relative;
+    background-color: transparent;
+    color: var(--main-color-1);
+    font-weight: 500;
+    letter-spacing: 0px;
+    border-bottom: 2.5px solid var(--main-color-2);
+    border-radius: 0px;
+    padding: 0.15rem 0;
+}
+
+.btn.secondary-btn::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2.5px;
+    bottom: -2.5px;
+    left: 0;
+    background-color: var(--main-color-1);
+    transition: 0.3s ease-in-out;
+}
+
+.btn.secondary-btn:hover::before {
+    width: 100%; 
+}
+
+
+.showcase-image {
+    position: relative;
+    width: 100%;
+    min-height: calc(100% + 120px);
+    background-image: linear-gradient(
+        124deg,
+        var(--main-color-1) 53%,
+        var(--main-color-2) 53%,
+
+    );
+    margin-top: -120px;
+    border-radius: 0 0 80px 80px;
+}
+
+.showcase-image .person {
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    left: 5%;
+    transform: translateX(-50%);
+}
+
+
+.dots {
+    width: 112px;
+}
+
+.square{
+    width: 70px;
+}
+
+.showcase-area .circle{
+    position: absolute;
+    width: 190px;
+    left: 0%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-area .dots{
+    position: absolute;
+    left: 100%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-area .square {
+    position: absolute;
+    left: 25%;
+    bottom: 120px;
+    transform: translate(-50%, -50%);
+}
+
