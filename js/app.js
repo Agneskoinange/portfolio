@@ -87,6 +87,18 @@ function mlCounter() {
         setTimeout(() => {
         updateCount(ctr, target);
         }, 400);
-});
-
+    });
 }
+
+mlCounter();
+
+/*--------Portfolio Filter Animation------ */
+
+let mixer = mixitup(".portfolio-gallery", {
+    selectors: {
+        target: ".prt-card",
+    },
+    animation: { 
+        duration: 500,
+    },
+});
