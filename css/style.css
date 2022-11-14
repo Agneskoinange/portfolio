@@ -76,6 +76,31 @@ ul {
     color: var(--main-color-1);
 }
 
+.sub-heading{
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--main-color-2);
+    padding: 0.13rem 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.heading {
+    color: var(--heading-color);
+    font-size: 3rem;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.text {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 2rem 0;
+}
+
 /*--------Navbar styles------ */
 
 header {
@@ -174,7 +199,7 @@ header.scrolled .logo{
     font-size: 1.1rem;
     cursor: pointer;
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
-    transition: 00.3s;
+    transition: 0.3s;
     margin-right: 1rem;
 }
 
@@ -191,25 +216,12 @@ header.scrolled .logo{
     position: relative;
 }
 
-
 .showcase-area .container {
     display: grid;
     grid-template-columns: 1fr 550px;
     height: calc(100vh - 120px);
     max-height: 600px;
     align-items: center;
-}
-
-.sub.heading{
-    color: var(--heading-color);
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    border-left: 3px solid var(--main-color-2);
-    padding: 0.13rem 0.75rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-
 }
 
 .showcase-area .sub.heading {
@@ -234,7 +246,7 @@ header.scrolled .logo{
     margin-right: 1.5rem;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: .9rem 1.75rem;
     border-radius: 17px;
@@ -242,6 +254,8 @@ header.scrolled .logo{
     color: #fff;
     font-size: 0.85rem;
     letter-spacing: 0.4px;
+    min-width: 125px;
+    text-align: center;
     text-transform: capitalize;
     transition: 0.3s;
 }
@@ -278,7 +292,6 @@ header.scrolled .logo{
     width: 100%; 
 }
 
-
 .showcase-image {
     position: relative;
     width: 100%;
@@ -286,8 +299,7 @@ header.scrolled .logo{
     background-image: linear-gradient(
         124deg,
         var(--main-color-1) 53%,
-        var(--main-color-2) 53%,
-
+        var(--main-color-2) 53%
     );
     margin-top: -120px;
     border-radius: 0 0 80px 80px;
@@ -297,7 +309,7 @@ header.scrolled .logo{
     position: absolute;
     width: 95%;
     bottom: 0;
-    left: 5%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
@@ -332,3 +344,210 @@ header.scrolled .logo{
     transform: translate(-50%, -50%);
 }
 
+
+/*--------About section------ */
+
+.about .container {
+    display: grid;
+    grid-template-columns:1.05fr 1fr ;
+    align-items: center;
+}
+
+.about .text{
+    margin: 3rem 4rem;
+}
+.about-grid{
+    display: grid;
+    grid-template-columns:190px 190px ;
+    grid-template-rows:190px 190px ;
+    justify-content: center;
+    column-gap: 2.5rem;
+    row-gap: 100px;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.about-card{
+    background-color: var(--bg-color-2);
+    width: 100% ;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s transform;
+}
+
+.about-card:nth-child(1){
+  border-radius: 40px 40px 5px 40px;
+}
+
+
+.about-card:nth-child(2){
+    margin-top: 50px;
+    border-radius: 40px 40px 5px 40px;
+}
+
+.about-card:nth-child(3){
+  margin-top: -50px;
+  border-radius: 40px 5px 40px 40px;
+}
+
+.about-card:nth-child(4){
+  
+  border-radius: 5px 40px 40px 40px;
+}
+
+.icon{
+    width: 60px;
+}
+
+.st0{
+    fill: var(--bg-color-3);
+}
+
+
+.st2{
+  fill: var(--heading-color);
+  transition: 0.3s;
+}
+
+.about-card h3{
+   color: var(--heading-color);
+   font-weight: 600;
+   font-size: 1rem;
+   margin-top: 1rem;
+   letter-spacing: 0.3px;
+}
+
+.about-card:hover{
+   transform: scale(1.1);
+}
+
+.about-card:hover .st2{
+   fill: var(--main-color-1);
+}
+
+.about-grid::before{
+   content: "";
+   position: absolute;
+   width: 210px;
+   height: 210px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border: solid var(--main-color-1);
+   z-index: -1;
+   opacity: 0.07;
+}
+
+.about.triangle{
+  position: absolute;
+  left: 90%;
+  top: 27%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*--------Skills Section Styling------ */
+
+.skills {I
+    overflow: hidden;
+}                  
+
+.skills-box {
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.box-desc{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.skills-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sk-progress{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.sk-progress svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.sk-progress svg circle{
+    fill: var(--bg-color-3);
+    stroke-width: 5px;
+    stroke: var(--main-color-1);
+    stroke-linecap: round;
+    stroke-dasharray: 427;
+    stroke-dashoffset: 427;
+}  
+
+@keyframes progress{
+    to {
+      stroke-dashoffset: var(--target);   I
+    }
+}
+     
+.counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    color: var(--heading-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.counter span{
+  font-size: 2.45rem;
+}
+
+.sk-title{
+    color: var(--heading-color);
+    margin-top: 0.75rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.skills .dots{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.skills .square{
+    position: absolute;
+    left: 100%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+}
