@@ -257,6 +257,10 @@ header.scrolled .logo{
     min-width: 125px;
     text-align: center;
     text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -297,11 +301,11 @@ header.scrolled .logo{
     position: relative;
     width: 100%;
     min-height: calc(100% + 120px);
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         124deg,
         var(--main-color-1) 53%,
         var(--main-color-2) 53%
-    );
+    ); */
     margin-top: -120px;
     border-radius: 0 0 80px 80px;
 }
@@ -792,4 +796,93 @@ header.scrolled .logo{
     opacity: 1;
     transform: translateY(0px);
     transition: 0.3s var(-i);
+}
+
+
+
+.contact .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+}
+
+.mail {
+    color: var(--main-color-1);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.mail i {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 2px;
+    transform: translateY(3px);
+    transition: 0.3s margin-left;
+}
+
+.mail:hover {
+    color: var (--main-color-dark-1)
+}
+
+.mail:hover i{
+    margin-left: 10px;
+}
+
+.form-input {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    background: var(--bg-color-3);
+    border: 2px solid var(--bg-color-3);
+    width: 100%;
+    border-radius: 17px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--heading-color);
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-input::placeholder {
+    color: var(-text-color);
+}
+
+.form-input:hover {
+    filter: brightness(97%);
+}
+
+.form-input:valid,
+.form-input:focus {
+    filter: brightness(100%);
+    background: var(--bg-color-1);
+    border-color: var(--main-color-1);
+ } 
+
+ textarea.form-input {
+    resize: none;
+    min-height: 170px;
+}
+
+.contact-form .form-input {
+    margin-bottom: 1.5rem;
+}
+
+
+.contact-form .form-input {
+    margin-bottom: 1.5rem;
+}
+    
+.contact .square {
+    position: absolute;
+    left: 17%;
+    bottom: 15%;
+    transform: translate(-50%, -50%);
+ }
+    
+ .contact .triangle{
+    position: absolute;
+    left: 90%;
+    top: 98%;
+    transform: translate(-50%, -50%);
 }
