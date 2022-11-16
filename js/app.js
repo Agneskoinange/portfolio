@@ -102,3 +102,5 @@ let mixer = mixitup(".portfolio-gallery", {
         duration: 500,
     },
 });
+
+/*--------Page theme------ */

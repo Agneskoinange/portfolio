@@ -503,6 +503,7 @@ header.scrolled .logo{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
+    
 }
 
 .sk-progress svg circle{
@@ -798,7 +799,7 @@ header.scrolled .logo{
     transition: 0.3s var(-i);
 }
 
-
+/*--------Contact Section Styling------ */
 
 .contact .container{
     display: grid;
@@ -885,4 +886,38 @@ header.scrolled .logo{
     left: 90%;
     top: 98%;
     transform: translate(-50%, -50%);
+}
+
+/*--------Footer Section Styling------ */
+
+/* footer {
+    padding: 4rem 0;
+} */
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .social-media {
+    display: flex;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social-link:hover{
+    color: var(--main-color-1);
 }
